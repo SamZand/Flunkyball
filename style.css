@@ -5,3 +5,8 @@ body {
     font-family: arial;
     color: #212121;
 }
+
+footer {
+    display: block;
+    padding: 3px;
+}
