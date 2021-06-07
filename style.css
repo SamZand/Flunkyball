@@ -1,17 +1,39 @@
 html,
+
+* {
+    box-sizing: border-box;
+}
+
 body {
+    display: block;
     height: 100%;
     margin: 0 auto;
-    width: 100%;
     min-width: fit-content;
-    max-width: 1000px;
+    max-width: 25%;
     background-color: #ffffff;
     font-family: arial;
     font-size: 14px;
     color: #212121;
-    display: block;
-    
+    line-height: 140%;
+    padding: 10px;
 }
-.text{
-    padding: 15px;
+
+.header {
+    line-height: 140%;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+
+.text {
+    line-height: 140%;
+    max-width: 90%;
+}
+
+.footer {
+    
+    padding: 3px;
+    margin-top: 20px;
 }
