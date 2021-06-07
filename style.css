@@ -1,9 +1,17 @@
 html,
 body {
     height: 100%;
-    margin: 10px;
+    margin: 0 auto;
     width: 100%;
+    min-width: fit-content;
+    max-width: 1000px;
     background-color: #ffffff;
     font-family: arial;
+    font-size: 14px;
     color: #212121;
+    display: block;
+    
+}
+.text{
+    padding: 15px;
 }
