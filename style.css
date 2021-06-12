@@ -26,14 +26,26 @@ body {
     font-size: 30px;
 }
 
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 
 .text {
     line-height: 140%;
-    max-width: 90%;
+    max-width: 850px;
 }
 
 .footer {
-    
+
     padding: 3px;
     margin-top: 20px;
 }
