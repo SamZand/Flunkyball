@@ -10,12 +10,21 @@ body {
     margin: 0 auto;
     min-width: fit-content;
     max-width: 25%;
-    background-color: #ffffff;
     font-family: arial;
     font-size: 14px;
-    color: #212121;
     line-height: 140%;
     padding: 10px;
+    --text-color: #222;
+    --bkg-color: #fff;
+}
+
+body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #232B32;
+}
+
+:root {
+    color-scheme: light dark;
 }
 
 .header {
@@ -45,7 +54,33 @@ body {
 }
 
 .footer {
-
     padding: 3px;
     margin-top: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    /* defaults to dark theme */
+    body {
+        --text-color: #eee;
+        --bkg-color: #232B32;
+    }
+
+    body.light-theme {
+        --text-color: #222;
+        --bkg-color: #fff;
+    }
+    
+}
+
+body {
+    background: var(--bkg-color);
+}
+
+
+.text,
+.header,
+.footer,
+.quick {
+    color: var(--text-color);
 }
