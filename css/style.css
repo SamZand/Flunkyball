@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+    font-family: OpenDyslexic-Regular;
+    src: url(/fonts/OpenDyslexic-Regular.otf);
+}
+
+:root {
+    --primary-color: #302ae6;
+    --secondary-color: #97938e;
+    --font-color: #32312f;
+    --bg-color: #fdf6ee;
+    --heading-color: #191817;
+    --font-family: "Roboto", sans-serif;
+}
+
+[data-theme=dark] {
+    --primary-color: #9a97f3;
+    --secondary-color: #b3b3b3;
+    --font-color: #fdf6ee;
+    --bg-color: #191817;
+    --heading-color: #b3b3b3;
+}
+
+[data-font=dyslexic] {
+    --font-family: "OpenDyslexic-Regular";
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: calc(1rem + 0.25vh);
+    transition: 0.5s;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    margin-bottom: 1vh;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    border-bottom: 3px solid currentColor;
+}
+
+section {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.post-meta {
+    font-size: 1rem;
+    font-style: italic;
+    display: block;
+    margin-bottom: 2vh;
+    color: var(--secondary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+/*slider switch css */
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.switch-wrapper em {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 54px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #4b4947;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 20px;
+}
+
+input:checked+.slider {
+    background-color: #007CC7;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
